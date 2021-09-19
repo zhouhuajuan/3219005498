@@ -32,12 +32,7 @@ public class Solution {
         //计算相似度
         double similarity = HammingDistanceUtil.getSimilarity(simHash0, simHash1);
         //将结果写入文件
-        try {
-            FileUtil.writeFile(similarity, similarityFile);
-            throw new FilePathIsWrongException();
-        } catch (FilePathIsWrongException e) {
-            e.printStackTrace();
-        }
-
+        FileUtil.writeFile(similarity, similarityFile);
+        System.exit(0);
     }
 }
